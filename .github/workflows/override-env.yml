@@ -9,4 +9,4 @@ jobs:
       - run: echo "${EXAMPLE}"
       - env:
           EXAMPLE: job level
-      - run: echo "${EXAMPLE}"
+        run: echo "${EXAMPLE}"
