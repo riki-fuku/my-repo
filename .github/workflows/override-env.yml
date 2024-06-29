@@ -4,7 +4,9 @@ env:
   EXAMPLE: workflow level
 jobs:
   print:
-    - run: echo "${ EXAMPLE }"
-    - env:
-        EXAMPLE: job level
-      run: echo "${ EXAMPLE }"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${ EXAMPLE }"
+      - env:
+          EXAMPLE: job level
+        run: echo "${ EXAMPLE }"
