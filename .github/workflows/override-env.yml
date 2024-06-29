@@ -1,0 +1,10 @@
+name: override-env
+on: push
+env:
+  EXAMPLE: workflow level
+jobs:
+  print:
+    - run: echo "${ EXAMPLE }"
+    - env:
+        EXAMPLE: job level
+      run: echo "${ EXAMPLE }"
