@@ -1,0 +1,7 @@
+name: Objectfilter
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      -run: ${{ github.event.*.html_url }}
