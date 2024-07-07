@@ -1,0 +1,13 @@
+name: Literarls
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep 'LITERAL_'
+        env:
+          LITERAL_NULL: ${{ null }}
+          LITERAL_BOOLERAN: ${{ true }}
+          LITERAL_NUMBER: ${{ 42 }}
+          LITERAL_STRING: ${{ 'Hello, World!' }}
+          LITERAL_OMIT_STRING: WORLD
