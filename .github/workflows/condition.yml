@@ -4,6 +4,6 @@ jobs:
   skip-on-user:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "allwaays run"
-      if: ${{ github.actor == 'admin'}}
+      - run: echo "allways run"
       - run: echo "Hello, admin!"
+        if: ${{ github.actor == 'admin'}}
