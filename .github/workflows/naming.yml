@@ -1,0 +1,11 @@
+name: Naming
+on: push
+jobs:
+  print:
+    name: Job name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1 name
+        run: echo "Step1"
+      - name: Step2 name
+        run: echo "Step2"
