@@ -1,0 +1,13 @@
+name: Create pull request
+on: push
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permission:
+      pull-requests: write
+      contents: read
+      steps:
+        - uses: actions/checkout@v4
+        - run : gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GIT_HUB_ACTOR}"
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHIB_TOKEN }}
