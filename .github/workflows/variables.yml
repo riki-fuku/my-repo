@@ -4,6 +4,6 @@ jobs:
   print:
     runs-on: ubuntu-latest
     env:
-      SAMPLE: ${{ vars.SAMPLE }}
+      SAMPLE: ${{ vars.SAMPLE }} # This is the only difference
     steps:
       - run: echo "${SAMPLE}"
