@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.run_id }}"
-      - run: echo "contains 1"
-        if: contains(github.run_id, '1')
+      - run: echo "contains 2"
+        if: contains(github.run_id, '2')
