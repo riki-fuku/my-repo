@@ -1,0 +1,8 @@
+name: Condition
+on: push
+jobs:
+  skip-on-user:
+    if: ${{ github.actor == 'admin'}}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, admin!"
